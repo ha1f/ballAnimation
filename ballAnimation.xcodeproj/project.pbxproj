@@ -13,6 +13,7 @@
 		A4F5A1EB1B34CBB100694948 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4F5A1EA1B34CBB100694948 /* Images.xcassets */; };
 		A4F5A1EE1B34CBB100694948 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4F5A1EC1B34CBB100694948 /* LaunchScreen.xib */; };
 		A4F5A1FA1B34CBB200694948 /* ballAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F5A1F91B34CBB200694948 /* ballAnimationTests.swift */; };
+		A4F5A2041B34CBE300694948 /* SubBallClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F5A2031B34CBE300694948 /* SubBallClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		A4F5A1F31B34CBB200694948 /* ballAnimationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ballAnimationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4F5A1F81B34CBB200694948 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4F5A1F91B34CBB200694948 /* ballAnimationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ballAnimationTests.swift; sourceTree = "<group>"; };
+		A4F5A2031B34CBE300694948 /* SubBallClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubBallClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				A4F5A1E31B34CBB100694948 /* AppDelegate.swift */,
+				A4F5A2031B34CBE300694948 /* SubBallClass.swift */,
 				A4F5A1E51B34CBB100694948 /* ViewController.swift */,
 				A4F5A1E71B34CBB100694948 /* Main.storyboard */,
 				A4F5A1EA1B34CBB100694948 /* Images.xcassets */,
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4F5A2041B34CBE300694948 /* SubBallClass.swift in Sources */,
 				A4F5A1E61B34CBB100694948 /* ViewController.swift in Sources */,
 				A4F5A1E41B34CBB100694948 /* AppDelegate.swift in Sources */,
 			);
