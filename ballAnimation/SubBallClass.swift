@@ -9,13 +9,14 @@
 import Foundation
 import UIKit
 
-
+//UIButtonを継承したクラス
 class SubBallButton: UIButton {
-    
+    //targetとdefaultを持たせておく
     private var targetPoint: CGPoint!
     private var defaultPoint: CGPoint!
     
     init(){
+        //標準のプロパティを与えておく
         super.init(frame: CGRectMake(0,0, 80,80))
         self.layer.cornerRadius = 40
         self.addTarget(self, action: "onUpInside:", forControlEvents: .TouchUpInside)
@@ -40,7 +41,7 @@ class SubBallButton: UIButton {
         self.removeFromSuperview()
     }
     
-    //get
+    //プロパティのget
     func getTargetPoint() -> CGPoint!{
         return self.targetPoint
     }
@@ -49,18 +50,13 @@ class SubBallButton: UIButton {
         return self.defaultPoint
     }
     
-    //set
+    //プロパティのset
     func setDefaultPoint(point: CGPoint!){
         self.defaultPoint = point
     }
     
     func setTargetPoint(point: CGPoint!){
         self.targetPoint = point
-    }
-    
-    //極座標によりセット
-    func setTargetPointWithRelativePolar(x: CGFloat, y: CGFloat, radius: CGFloat, angle: Double){
-        self.setTargetPoint(CGPointMake(x + radius * CGFloat(cos(M_PI * angle / 180)), y + radius * CGFloat(sin(M_PI * angle / 180))))
     }
     
     //実際の座標をセット
@@ -71,18 +67,20 @@ class SubBallButton: UIButton {
     func setPositionToDefalut(){
         self.layer.position = self.defaultPoint
     }
+
+    /*アニメーション*/
     
-    //アニメーションでポイントまで移動
+    //targetまで移動
     func animateToTarget(duration: NSTimeInterval, completion: (Bool)-> Void){//targetまで
-        UIView.animateWithDuration(duration, delay: 0.0, options: UIViewAnimationOptions.CurveLinear, animations: {() -> Void in
-            self.layer.position = self.targetPoint}, completion:completion)
+        animateToPoint(duration, point: self.targetPoint, completion: completion)
     }
     
+    //defaultまで移動
     func animateToDefault(duration: NSTimeInterval, completion: (Bool)-> Void){//defaultまで
-        UIView.animateWithDuration(duration, delay: 0.0, options: UIViewAnimationOptions.CurveLinear, animations: {() -> Void in
-            self.layer.position = self.defaultPoint}, completion:completion)
+        animateToPoint(duration, point: self.defaultPoint, completion: completion)
     }
     
+    //引数でセットしたpositionまで移動
     func animateToPoint(duration: NSTimeInterval, point: CGPoint, completion: (Bool)-> Void){//指定pointまで
         UIView.animateWithDuration(duration, delay: 0.0, options: UIViewAnimationOptions.CurveLinear, animations: {() -> Void in
             self.layer.position = point}, completion:completion)

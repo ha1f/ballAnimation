@@ -45,7 +45,7 @@ class ViewController: UIViewController {
     
     //メインボタンが押された時
     @IBAction func onButtonDown(sender: AnyObject?){
-        if(!self.animatingflag){//アニメーション中は反応しない
+        if(!self.animatingflag){//アニメーション中は反応しないように
             if subButtonFlag {
                 self.animatingflag = true
                 self.subButtonFlag = false
